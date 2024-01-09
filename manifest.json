@@ -1,0 +1,15 @@
+{
+  "name": "Custom Newtab",
+  "description": "Personalized override of Chrome New Tab page.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "chrome_url_overrides": { "newtab": "index.html" },
+  "oauth2": {
+    "client_id": "CLIENT_ID",
+    "scopes": ["https://www.googleapis.com/auth/calendar.readonly"]
+  },
+  "content_security_policy": "script-src 'self' https://apis.google.com/; object-src 'self'",
+  "permissions":  [
+    "identity"
+  ]
+}
