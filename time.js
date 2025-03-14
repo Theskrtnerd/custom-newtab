@@ -2,22 +2,25 @@ function startTime() {
     var today = new Date();
     var hr = today.getHours();
     var min = today.getMinutes();
-    ap = (hr < 12) ? "<span>AM</span>" : "<span>PM</span>";
+    var sec = today.getSeconds();
+    ap = (hr < 12) ? "AM" : "PM";
     hr = (hr == 0) ? 12 : hr;
     hr = (hr > 12) ? hr - 12 : hr;
     //Add a zero in front of numbers<10
     hr = checkTime(hr);
     min = checkTime(min);
-    document.getElementById("clock").innerHTML = hr + ":" + min + " " + ap;
+    sec = checkTime(sec);
+    timeStr = hr + ":" + min + ":" + sec + " " + ap;
     
-    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     var curWeekDay = days[today.getDay()];
     var curDay = today.getDate();
     var curMonth = months[today.getMonth()];
     var curYear = today.getFullYear();
-    var date = curWeekDay+", "+curDay+" "+curMonth+" "+curYear;
-    document.getElementById("date").innerHTML = date;
+
+    dateStr = curDay+" "+curMonth+" "+curYear;
+    document.getElementById("search").placeholder = timeStr + ", " + dateStr;
     
     var time = setTimeout(function(){ startTime() }, 500);
 }
