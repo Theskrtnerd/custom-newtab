@@ -8,15 +8,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
-  <script defer src="quote.js"></script>
 </head>
 <body>
-  <div class="title">
-    <input type="text" id="search" placeholder="Enter something..." autofocus>
+  <input id="title" type="search" autofocus>
+  <div id="display">
+    Loading quotes...
   </div>
-  <div class="display">
-    <p id="quote">Loading quote...</p>
-  </div>
+  <script type="module" src="quote.js"></script>
+  <script type="module" src="search.js"></script>
   <script src="time.js"></script>
 </body>
 </html>

@@ -20,7 +20,7 @@ function startTime() {
     var curYear = today.getFullYear();
 
     dateStr = curDay+" "+curMonth+" "+curYear;
-    document.getElementById("search").placeholder = timeStr + ", " + dateStr;
+    document.getElementById("title").placeholder = timeStr + ", " + dateStr;
     
     var time = setTimeout(function(){ startTime() }, 500);
 }

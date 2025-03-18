@@ -21,21 +21,11 @@ body {
   font-family: "Roboto Mono", sans-serif;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   border-radius: 15px;
-  padding: 20px 40px;
+  padding: 30px 40px;
   font-size: 14px;
 }
 
-.title {
-  color: rgba(255, 255, 255, 0.8); 
-  width: 100%;
-}
-
-.display {
-  color: white;
-  width: 100%;
-}
-
-#search {
+#title {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -44,10 +34,22 @@ body {
   caret-color: transparent;
   font-size: inherit;
   font-family: inherit;
-  color: inherit;
+  color: rgba(255, 255, 255, 0.8); 
   width: 100%;
+}
+
+#display {
+  padding-top: 20px;
+  color: white;
+  width: 100%;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 input::placeholder {
   color: inherit;
+}
+
+#title::-webkit-search-cancel-button {
+  display: none;
 }
